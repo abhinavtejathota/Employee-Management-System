@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "../../components/Sidebar";
-import Navbar from "../../components/Navbar";
-import DashboardCard from "../../components/DashboardCards";
-import PayrollSummary from "../../components/PayrollSummary";
+import Sidebar from "../../adminComponents/Sidebar";
+import Navbar from "../../adminComponents/Navbar";
+import DashboardCard from "../../adminComponents/DashboardCards";
+import PayrollSummary from "../../adminComponents/PayrollSummary";
 import api from "../../services/api";
 import { isAdmin } from "../../services/auth";
 import { Navigate } from "react-router-dom";

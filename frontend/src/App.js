@@ -2,6 +2,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
+import EmployeeDashboard from "./pages/Employee/EmployeeDashboard";
+import ManagerDashboard from "./pages/Manager/ManagerDashboard";
 import Departments from "./pages/Admin/Departments";
 import Employees from "./pages/Admin/Employees";
 import Payrolls from "./pages/Admin/Payrolls";
@@ -19,6 +21,8 @@ function App() {
 		<Route path="/admin/payrolls" element={<Payrolls />} />
 		<Route path="/admin/audit-logs" element={<AuditLogs />} />
         <Route path="/not-authorized" element={<NotAuthorized />} />
+		<Route path="/employee/dashboard" element={<EmployeeDashboard />} />
+		<Route path="/manager/dashboard" element={<ManagerDashboard />} />
       </Routes>
     </BrowserRouter>
   );

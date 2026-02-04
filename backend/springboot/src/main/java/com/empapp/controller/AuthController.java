@@ -65,7 +65,7 @@ public class AuthController {
         String redirectUrl = switch (userDto.getRoleName()) {
             case "ADMIN" -> "/admin/dashboard";
             case "MANAGER" -> "/manager/dashboard";
-            case "USER" -> "/user/dashboard";
+            case "EMPLOYEE" -> "/employee/dashboard";
             default -> "/dashboard";
         };
 
@@ -73,7 +73,7 @@ public class AuthController {
         sessionDto.setUserId(userEntity.getUserId());
         sessionDto.setUsername(userEntity.getUsername());
         sessionDto.setCreatedAt(Timestamp.from(Instant.now()));
-        sessionDto.setExpiresAt(Timestamp.from(Instant.now().plusSeconds(3600)));
+        sessionDto.setExpiresAt(Timestamp.from(Instant.now().plusSeconds(300)));
 
         SessionsDTO savedSession = sessionsService.createSession(sessionDto, userEntity);
 
